@@ -12,7 +12,7 @@ Skill 的实现和维护仍然分散在各自的源仓库里（[`service-governa
 | --- | --- |
 | [`project-manager`](https://github.com/farfarfun-skill/project-manager/blob/master/skills/project-manager/SKILL.md) | 研发全生命周期治理：立项、设计、开发、测试、发布、复盘各阶段的产物门禁、风险与角色交接 |
 | [`project-structure-governance`](https://github.com/farfarfun-skill/project-manager/blob/master/skills/project-structure-governance/SKILL.md) | 仓库规范结构：新文件该放哪、产物怎么命名、目录如何初始化与重组 |
-| [`github-repo-standards`](https://github.com/farfarfun-skill/project-manager/blob/master/skills/github-repo-standards/SKILL.md) | 仓库对外呈现：README 结构完整性，以及 description / Topics 这些可发现性元信息 |
+| [`github-repo-standards`](https://github.com/farfarfun-skill/project-manager/blob/master/skills/github-repo-standards/SKILL.md) | 仓库对外呈现：默认分支命名、README 结构完整性，以及 description / Topics 这些可发现性元信息 |
 
 ### 服务工程规范 —— [`service-governance`](https://github.com/farfarfun-skill/service-governance)
 
@@ -26,8 +26,8 @@ Skill 的实现和维护仍然分散在各自的源仓库里（[`service-governa
 
 | Skill | 适用场景 |
 | --- | --- |
-| [`python-development-standards`](https://github.com/farfarfun-skill/lang-spec-hub/blob/main/skills/python-development-standards/SKILL.md) | Python 代码、测试、项目配置、服务 CLI 契约及 farfarfun 工具复用规范 |
-| [`java-development-standards`](https://github.com/farfarfun-skill/lang-spec-hub/blob/main/skills/java-development-standards/SKILL.md) | Java 代码、测试、Maven/Gradle 项目的实现和审查 |
+| [`python-development-standards`](https://github.com/farfarfun-skill/lang-spec-hub/blob/master/skills/python-development-standards/SKILL.md) | Python 代码、测试、项目配置、服务 CLI 契约及 farfarfun 工具复用规范 |
+| [`java-development-standards`](https://github.com/farfarfun-skill/lang-spec-hub/blob/master/skills/java-development-standards/SKILL.md) | Java 代码、测试、Maven/Gradle 项目的实现和审查 |
 
 ### Paperclip 平台治理 —— [`paperclip-governance`](https://github.com/farfarfun-skill/paperclip-governance)
 
@@ -52,7 +52,9 @@ Skill 的实现和维护仍然分散在各自的源仓库里（[`service-governa
 
 `service-release-governance`/`bash-service-guide`/`submodule-workspace-governance` 三者互相引用密集，同放在 `service-governance` 一个仓库内以保持相对链接不失效。
 
-## 调用示例
+## 使用
+
+查到对应 Skill 后，在 Codex/Claude 等编码代理里直接声明要使用它：
 
 ```text
 Use $project-manager to review this feature's PRD and lifecycle-stage readiness.
@@ -72,4 +74,10 @@ Use $paperclip-task-coordinator to run the assigned Paperclip coordination heart
 ## 新增/调整 Skill 时
 
 在源仓库里完成 Skill 的新增、删除或职责调整后，回到这里同步更新上面路由表的一行，保持这里是「全组织 Skill 一览」的唯一入口。同时记得更新
-[组织主页](https://github.com/farfarfun-skill/.github/blob/main/profile/README.md)的仓库总览表。
+[组织主页](https://github.com/farfarfun-skill/.github/blob/master/profile/README.md)的仓库总览表。
+
+## 关于组织
+
+本仓库属于 [farfarfun-skill](https://github.com/farfarfun-skill) —— [farfarfun](https://github.com/farfarfun) 旗下的 AI Agent Skill 产品线子组织，也是全部自研 Skill 的源头。组织内各仓库分别聚焦一个治理域，把原本依赖人工评审的规范，转化为 Agent 可直接调用的确定性检查器与工作流；issue、PR 与规范变更均在此处提交。
+
+本仓库在其中不含 Skill，只维护上面这张跨仓库路由表，是选择 Skill 的统一入口。需要批量安装（含社区 Skill）或通过 Gitee 访问，请前往镜像组织 [farfarfun-skills](https://github.com/farfarfun-skills)。
