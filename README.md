@@ -81,3 +81,5 @@ Use $paperclip-task-coordinator to run the assigned Paperclip coordination heart
 本仓库属于 [farfarfun-skill](https://github.com/farfarfun-skill) —— [farfarfun](https://github.com/farfarfun) 旗下的 AI Agent Skill 产品线子组织，也是全部自研 Skill 的源头。组织内各仓库分别聚焦一个治理域，把原本依赖人工评审的规范，转化为 Agent 可直接调用的确定性检查器与工作流；issue、PR 与规范变更均在此处提交。
 
 本仓库在其中不含 Skill，只维护上面这张跨仓库路由表，是选择 Skill 的统一入口。需要批量安装（含社区 Skill）或通过 Gitee 访问，请前往镜像组织 [farfarfun-skills](https://github.com/farfarfun-skills)。
+
+本项目基于 [MIT](LICENSE) 协议开源。
